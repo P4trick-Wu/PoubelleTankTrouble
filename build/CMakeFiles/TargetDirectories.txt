@@ -1,3 +1,0 @@
-/home/patrick/poubelleTankTrouble/build/CMakeFiles/poubelleTankTrouble.dir
-/home/patrick/poubelleTankTrouble/build/CMakeFiles/edit_cache.dir
-/home/patrick/poubelleTankTrouble/build/CMakeFiles/rebuild_cache.dir
