@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/patrick/poubelleTankTrouble/build",
+  "command": "/usr/bin/c++  -I/home/patrick/poubelleTankTrouble/src -g -o CMakeFiles/poubelleTankTrouble.dir/src/main.cpp.o -c /home/patrick/poubelleTankTrouble/src/main.cpp",
+  "file": "/home/patrick/poubelleTankTrouble/src/main.cpp",
+  "output": "CMakeFiles/poubelleTankTrouble.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/patrick/poubelleTankTrouble/build",
+  "command": "/usr/bin/cc  -I/home/patrick/poubelleTankTrouble/src -g -o CMakeFiles/poubelleTankTrouble.dir/src/glad.c.o -c /home/patrick/poubelleTankTrouble/src/glad.c",
+  "file": "/home/patrick/poubelleTankTrouble/src/glad.c",
+  "output": "CMakeFiles/poubelleTankTrouble.dir/src/glad.c.o"
+}
+]
