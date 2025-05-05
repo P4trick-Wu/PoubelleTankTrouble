@@ -13,6 +13,10 @@ add_executable(poubelleTankTrouble
     src/main.cpp 
     src/glad.h 
     src/glad.c
+    src/server.hpp
+    src/server.cpp
+    src/client.hpp
+    src/client.cpp
 )
 
 target_link_libraries(poubelleTankTrouble 
