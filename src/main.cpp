@@ -34,13 +34,14 @@ int main(int, char**){
         glfwTerminate();
         return -1;
     }
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     window = glfwCreateWindow(640, 480, "Window!", NULL, NULL);
     if(window == NULL) {
         std::cerr << "Failed to create GLFW window" << std::endl;
+        std::cerr << glfwGetError(NULL) << "\n";
         glfwTerminate();
         return -1;
     }
@@ -61,9 +62,6 @@ int main(int, char**){
 
     //test by setting color
 
-    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
-
     // Render loop
     while (!glfwWindowShouldClose(window)) {
 
@@ -73,6 +71,9 @@ int main(int, char**){
         processInput(window);
 
         #pragma endregion
+
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
 
         // Check and call events and swap the buffers
         glfwSwapBuffers(window);

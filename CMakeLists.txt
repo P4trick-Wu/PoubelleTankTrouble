@@ -11,7 +11,7 @@ find_package(OpenGL REQUIRED)
 
 add_executable(poubelleTankTrouble 
     src/main.cpp 
-    src/glad.h 
+    src/glad/glad.h 
     src/glad.c
     src/server.hpp
     src/server.cpp
