@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <unistd.h>
 #include <arpa/inet.h>
+#include "message.hpp"
 
 #define SERVER_IP "127.0.0.1"
 #define SERVER_PORT 50227
@@ -14,13 +15,13 @@
 
 class Client {
     public:
-            Client();
-            ~Client();
-    
-        private:
-            int sockfd;
-            struct sockaddr_in server_addr;
-            char buffer[BUFFER_SIZE];
+        Client();
+        ~Client();
+
+    private:
+        int sockfd;
+        struct sockaddr_in server_addr;
+        Message buffer;
 };
 
 #endif

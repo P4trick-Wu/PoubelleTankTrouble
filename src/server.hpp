@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <unistd.h>
 #include <arpa/inet.h>
+#include "message.hpp"
 
 #define PORT 50227
 #define BUFFER_SIZE 1024
@@ -19,7 +20,7 @@ class Server {
     
     private:
         int sockfd;
-        char buffer[BUFFER_SIZE];
+        Message buffer;
         struct sockaddr_in server_addr;
         struct sockaddr_in client_addr;
 };

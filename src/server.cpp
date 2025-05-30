@@ -15,13 +15,16 @@ Server::Server() {
 void Server::run() {
     socklen_t len = sizeof(this->client_addr);
     while (true) {
-        ssize_t n = recvfrom(this->sockfd, this->buffer, BUFFER_SIZE - 1, 0, (struct sockaddr*)&this->client_addr, &len);
-        buffer[n] = '\0';
+        ssize_t n = recvfrom(this->sockfd, &this->buffer, BUFFER_SIZE - 1, 0, (struct sockaddr*)&this->client_addr, &len);
 
-        std::cout << "Received: " << buffer << "\n";
-
-        const char* response = "Response from server\n";
-        sendto(this->sockfd, response, strlen(response), 0, (struct sockaddr*)&this->client_addr, len);
+        if (buffer.data == CLIENT_CONNECT) {
+            std::cout << "Client connect.\n";
+        } else if (buffer.data == CLIENT_ATTEMPT_DISCONNECT) {
+            std::cout << "Client disconnect.\n";
+            Message response;
+            response.data = DISCONNECT_SUCCESS;
+            sendto(this->sockfd, &response, sizeof(response), 0, (struct sockaddr*)&this->client_addr, len);
+        }
     }
 }
 
