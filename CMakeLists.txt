@@ -17,6 +17,11 @@ add_executable(poubelleTankTrouble
     src/server.cpp
     src/client.hpp
     src/client.cpp
+    src/message.hpp
+    src/shader_tools.hpp
+    src/shader_tools.cpp
+    src/game.hpp
+    src/game.cpp
 )
 
 target_link_libraries(poubelleTankTrouble 
