@@ -22,6 +22,15 @@ add_executable(poubelleTankTrouble
     src/shader_tools.cpp
     src/game.hpp
     src/game.cpp
+    src/point.hpp
+    src/point.cpp
+    src/color.hpp
+    src/color.cpp
+    src/triangle.hpp
+    src/triangle.cpp
+    src/renderer.hpp
+    src/renderer.cpp
+    src/templates/array.hpp
 )
 
 target_link_libraries(poubelleTankTrouble 
